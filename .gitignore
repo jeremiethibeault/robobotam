@@ -128,6 +128,8 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# Medias
-artefacts/
+bin/
+obj/
+appsettings.Local.json
+*.mp3
 .DS_STORE
