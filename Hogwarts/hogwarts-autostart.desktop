@@ -1,0 +1,6 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Hogwarts
+Comment=Starts Hogwarts
+Exec=/usr/bin/lxterminal --command 'bash -i /home/pi/apps/hogwarts/startup.sh; read -n 1 -s'
+

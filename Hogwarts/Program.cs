@@ -63,22 +63,27 @@ namespace Hogwarts
                 switch (cki.Key)
                 {
                     case ConsoleKey.RightArrow:
+                    case ConsoleKey.V:
                         await mediaPlayerProcess.Next();
                         break;
 
                     case ConsoleKey.LeftArrow:
+                    case ConsoleKey.C:
                         await mediaPlayerProcess.Previous();
                         break;
 
                     case ConsoleKey.Spacebar:
+                    case ConsoleKey.P:
                         await mediaPlayerProcess.TogglePause();
                         break;
 
                     case ConsoleKey.UpArrow:
+                    case ConsoleKey.U:
                         await mediaPlayerProcess.IncreaseVolume();
                         break;
 
                     case ConsoleKey.DownArrow:
+                    case ConsoleKey.D:
                         await mediaPlayerProcess.DecreaseVolume();
                         break;
 

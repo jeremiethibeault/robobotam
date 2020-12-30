@@ -58,7 +58,10 @@ namespace Hogwarts.Services
                 var pattern = @"audio volume: (\d*)";
                 var matches = Regex.Matches(volume, pattern);
 
-                _logger.LogInformation($"Increasing volume to '{matches[0].Groups[1]}'.");
+                if (matches.Count > 0 && matches[0].Groups.Count > 1)
+                {
+                    _logger.LogInformation($"Increasing volume to '{matches[0].Groups[1]}'.");
+                }
             });
         }
 
@@ -69,7 +72,10 @@ namespace Hogwarts.Services
                 var pattern = @"audio volume: (\d*)";
                 var matches = Regex.Matches(volume, pattern);
 
-                _logger.LogInformation($"Decreasing volume to '{matches[0].Groups[1]}'.");
+                if (matches.Count > 0 && matches[0].Groups.Count > 1)
+                {
+                    _logger.LogInformation($"Decreasing volume to '{matches[0].Groups[1]}'.");
+                }
             });
         }
 
