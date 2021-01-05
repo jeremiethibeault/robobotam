@@ -63,36 +63,52 @@ namespace Hogwarts
                 switch (cki.Key)
                 {
                     case ConsoleKey.RightArrow:
-                    case ConsoleKey.V:
+                    case ConsoleKey.D6:
                         await mediaPlayerProcess.Next();
                         break;
 
                     case ConsoleKey.LeftArrow:
-                    case ConsoleKey.C:
+                    case ConsoleKey.D4:
                         await mediaPlayerProcess.Previous();
                         break;
 
                     case ConsoleKey.Spacebar:
-                    case ConsoleKey.P:
+                    case ConsoleKey.D5:
                         await mediaPlayerProcess.TogglePause();
                         break;
 
                     case ConsoleKey.UpArrow:
-                    case ConsoleKey.U:
+                    case ConsoleKey.D8:
+                    case ConsoleKey.Add:
                         await mediaPlayerProcess.IncreaseVolume();
                         break;
 
                     case ConsoleKey.DownArrow:
-                    case ConsoleKey.D:
+                    case ConsoleKey.D2:
+                    case ConsoleKey.Subtract:
                         await mediaPlayerProcess.DecreaseVolume();
                         break;
 
                     case ConsoleKey.R:
+                    case ConsoleKey.Multiply:
                         await mediaPlayerProcess.ToggleRandom();
                         break;
 
                     case ConsoleKey.L:
+                    case ConsoleKey.Divide:
                         await mediaPlayerProcess.ToggleLoop();
+                        break;
+
+                    case ConsoleKey.P:
+                    case ConsoleKey.D7:
+                    case ConsoleKey.Home:
+                        await mediaPlayerProcess.Play();
+                        break;
+
+                    case ConsoleKey.Q:
+                    case ConsoleKey.D1:
+                    case ConsoleKey.End:
+                        await mediaPlayerProcess.Stop();
                         break;
                 }
             } while (cki.Key != ConsoleKey.Escape);

@@ -51,6 +51,16 @@ namespace Hogwarts.Services
             });
         }
 
+        public async Task Play()
+        {
+            await Execute("play");
+        }
+
+        public async Task Stop()
+        {
+            await Execute("stop");
+        }
+
         public async Task IncreaseVolume()
         {
             await Execute(new[] { "volup", "volume" }, volume =>
